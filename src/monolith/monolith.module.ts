@@ -1,8 +1,8 @@
 import { HttpModule, Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { MonolithTestController } from './controllers/monolith-test.controller';
-import { MonolithTestService } from './services/monolith-test.service';
 import { RedisConfigModule } from '../config/redis/config.module';
+import { MonolithService } from './services/monolith.service';
+import { MonolithController } from './controllers/monolith.controller';
 
 @Module({
   imports: [
@@ -11,10 +11,10 @@ import { RedisConfigModule } from '../config/redis/config.module';
     RedisConfigModule
   ],
   controllers: [
-    MonolithTestController
+    MonolithController
   ],
   providers: [
-    MonolithTestService
+    MonolithService
   ],
 })
-export class MonolithTestModule {}
+export class MonolithModule {}

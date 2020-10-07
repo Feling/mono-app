@@ -1,11 +1,11 @@
-import { Body, Controller, Get, Header, HttpException, HttpStatus, Ip, Post } from '@nestjs/common';
-import { MonolithTestService } from '../services/monolith-test.service';
-import { ApiBody, ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Body, Controller, Get, Header, Ip, Post } from '@nestjs/common';
+import { ApiBody, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { MonolithService } from '../services/monolith.service';
 
 @ApiTags('Redis API')
 @Controller('/api/resource')
-export class MonolithTestController {
-  constructor(private monolithService: MonolithTestService) {
+export class MonolithController {
+  constructor(private monolithService: MonolithService) {
   }
 
   @ApiOperation({ description: 'Use /GET to receive a messages.' })

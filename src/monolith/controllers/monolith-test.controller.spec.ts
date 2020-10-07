@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { MonolithTestController } from './monolith-test.controller';
-import { MonolithTestService } from '../services/monolith-test.service';
 import { RedisConfigService } from '../../config/redis/config.service';
 import { ConfigService } from '@nestjs/config';
 import { RedisService } from 'nestjs-redis';
 import * as Redis from 'ioredis';
+import { MonolithService } from '../services/monolith.service';
+import { MonolithController } from './monolith.controller';
 
 
 
@@ -19,8 +19,8 @@ describe('MonolithTestController', () => {
 
   beforeAll(async () => {
     app = await Test.createTestingModule({
-      controllers: [MonolithTestController],
-      providers: [MonolithTestService,
+      controllers: [MonolithController],
+      providers: [MonolithService,
         ConfigService,
         {provide: RedisService, useValue: redisService},
         RedisConfigService],
@@ -30,14 +30,14 @@ describe('MonolithTestController', () => {
   describe('Get the messages', () => {
     it('should return "{"first":"test"}"', () => {
 
-      const monolithTestController = app.get<MonolithTestController>(MonolithTestController);
+      const monolithTestController = app.get<MonolithController>(MonolithController);
       expect(monolithTestController).toBeTruthy();
     });
   });
 
   describe('Post the messages', () => {
     it('should return {"Result": "Data added to Redis"}', () => {
-      const monolithTestController = app.get<MonolithTestController>(MonolithTestController);
+      const monolithTestController = app.get<MonolithController>(MonolithController);
       expect(monolithTestController).toBeTruthy();
     });
   });
