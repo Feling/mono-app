@@ -3,7 +3,7 @@ import { RedisService } from 'nestjs-redis';
 import { RedisConfigService } from '../../config/redis/config.service';
 
 @Injectable()
-export class MonolithTestService {
+export class MonolithService {
   constructor(private readonly redisService: RedisService, private configService: RedisConfigService) {
   }
 
