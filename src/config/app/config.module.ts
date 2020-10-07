@@ -10,12 +10,12 @@ import { AppConfigService } from './config.service';
     ConfigModule.forRoot({
       load: [configuration],
       validationSchema: Joi.object({
-        APP_NAME: Joi.string().default('MyApp'),
+        APP_NAME: Joi.string().default('Messages Exchange App'),
         APP_ENV: Joi.string()
           .valid('development', 'production', 'test', 'provision')
           .default('development'),
-        APP_URL: Joi.string().default('http://my-app.test'),
-        APP_PORT: Joi.number().default(9000),
+        APP_URL: Joi.string().default('http://localhost'),
+        APP_PORT: Joi.number().default(8080),
       }),
     }),
   ],

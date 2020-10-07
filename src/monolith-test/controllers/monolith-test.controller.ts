@@ -1,13 +1,14 @@
 import { Body, Controller, Get, Header, HttpException, HttpStatus, Ip, Post } from '@nestjs/common';
 import { MonolithTestService } from '../services/monolith-test.service';
-import { ApiBody, ApiOperation, ApiParam, ApiResponse } from '@nestjs/swagger';
+import { ApiBody, ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Redis API')
 @Controller('/api/resource')
 export class MonolithTestController {
   constructor(private monolithService: MonolithTestService) {
   }
 
-  @ApiOperation({ description: 'Get the messages' })
+  @ApiOperation({ description: 'Use /GET to receive a messages.' })
   @ApiResponse({ status: 200, description: 'Success' })
   @Get()
   @Header('Content-Type', 'application/json;charset=UTF-8')
@@ -15,7 +16,7 @@ export class MonolithTestController {
     return  this.monolithService.getMessageByReq(ip)
   }
 
-  @ApiOperation({ description: 'Post the message' })
+  @ApiOperation({ description: 'Use /POST for adding a new message to Redis.'})
   @ApiResponse({ status: 201, description: 'Success' })
   @ApiBody({type: 'string'})
   @Post()

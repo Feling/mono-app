@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { AppConfigModule } from './config/app/config.module';
 import { RedisConfigModule } from './config/redis/config.module';
 import { MonolithTestModule } from './monolith-test/monolith-test.module';
@@ -18,8 +16,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     }),
 
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {
 }

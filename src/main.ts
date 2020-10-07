@@ -10,10 +10,9 @@ async function bootstrap() {
   const appConfig: AppConfigService = app.get('AppConfigService');
 
   const options = new DocumentBuilder()
-    .setTitle('Monolith App')
-    .setDescription('Exercise with monolith impl.')
+    .setTitle('Message exchange App')
+    .setDescription('nestjs + redis.')
     .setVersion('1.0')
-    .addTag('monolith')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
