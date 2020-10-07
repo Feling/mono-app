@@ -1,32 +1,17 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+ 
+ ## Description
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Application for exchanging messages between two EC2 servers.  
 
-## Description
+In order to make it easier to test application, please use Swagger UI:
+    http://{service-host}:{service-port}/api
+    
+ I used Nestjs for back end, and Redis for DB.
+ 
+  Diagram of the flow you can find [here](https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1#R7Vpdk5o8FP41XNoxBBEu98PuzrQ7u1P7vu1thKiZRUIhrtpf37AkaEhUsKLu2J29gJN4Ep5znieHoxa8my0fUpRMn2iII8vuhksL3lu2DRzbtvL%2FbrgqLH1XGCYpCcWktWFIfmNh7ArrnIQ4UyYySiNGEtUY0DjGAVNsKE3pQp02ppG6aoImWDMMAxTp1h8kZFNhBa6%2FHnjEZDIVS3t2vxgYoeB1ktJ5LNazbDh%2B%2FyuGZ0j6Eg%2BaTVFIFxsmOLDgXUopK65myzsc5dhK2IrPfd4yWu47xTGr84HvQUB%2B%2FhjAmy%2BvHXvwP%2F1v%2BpJ2hJc3FM2xfIzPL8%2FD72LPbCVxen9SnPsCFrxdTAnDwwQF%2BeiCZwa3TdksEsP63uRCOGV4uWESe33AdIZZuuJTxGhPwCbSCvjifrERJAntdCM%2BrrAhkReT0vMaG34h4GkAlW2AqoIRD3GSX44jvLzJc5NDgeNQXN4HEcoyEtSECodK4upAbSDRMwAhbSmOECNvarqb0BErvFDCd1LGoSSqDITnf%2BqpTjI6TwMsPreZgRVXsLvXFUPpBDPNFUcQrTamJfmEbMemt2TPOv6Fx3U2lLgeniCuliAZTt8Ip0g1T7gzLm%2F85lZmTBDReXgSXkG3Ak3PQCzfkE8l247OLOCYVOhhcHEi5NjnFiHQ%2B6dC75FwjqZCBldbVOhYQgE%2BplJA0xF8WqWQjjeQ%2BzbIixWeX7808PhzMhWVjKX0Fd%2FRiKbcEtM4R3ZMoqhiQhGZxDnYHD3M7bc5aoQXjTdiYEbCMF%2FGGIa1SnWPEwmes6pmQz0SjiEQ7cUBXqcMVbWj9NtUhKp6pjlqqRDi90LsWi2FbP1Ezxhic77Tri0xvAam2l49poLWmNq%2FTsW0e%2BrZ5Z5bMf3rVEzbVwnRqyJcWzG7exwdSzEdbZ1TKCbUK5trUUxHxdvwPnpSxYQ1Gj153y%2Bp%2F%2FBl9xKNpIfuTlD6XuUYMciXawKlNf2CDSq%2BYBURniTp%2FreUUZFNX0eloWyqPs8Z94K3ytzu2O1Pv5WaWnuA9VrDVa%2BUvuGQZB%2BG8H8bBzl65vMZ6o2VmySJOEyM0LhxNCxecQQeHo0rIeH2EGFvHFyiEKslk6HXBU2FQnvU0NskW4Q4R4MVgYL3sBkejbXZrXaxDdpsbAqC9rqCevGwVZybFJfyiQAsJotv79xPdhNNFmG8kIIUeEr05LnWtBwFEmLhx6%2F4abuFqL9OPD4NDR3zyzg29tNztwLUFrG%2BqmH%2BeQ8VmSPtv%2FR9BOb5KmOAc2ADvwNUR95pu%2Fe2Xik8f7l23qm0AxCcl3jQO6h06LRdO%2FQq3RBoaOSba4d%2Ba7WD3iA8qUZ5F6VRncr5cWB14Ps7i4y2FUovnB%2BfTF%2BnX5xIbSPgbpLXrw7Uc%2BPMxUENjboe4oFKG9B3DmOePHnKX7dU%2FLRMPbn8BysO2uad%2Bs4FDE23I1GP365%2FUVkEdf2zVTj4Aw%3D%3D).
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+I tried to make this app as simple as possible, but yet fully functionally - its only POC :) 
+
 
 ## Installation
 
@@ -59,17 +44,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
 ## License
 
   Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
