@@ -3,9 +3,15 @@
 
 Application for exchanging messages between two EC2 servers.  
 
-In order to make it easier to test application, please use Swagger UI:
+In order to make it easier to test application, please use Swagger UI: 
     http://{service-host}:{service-port}/api
     
+ ## API
+ 
+ /POST : http://{service-host}:8080/api/resource
+ 
+ /GET  : http://{service-host}:8080/api/resource
+   
  I used Nestjs for back end, and Redis for DB.
  
 I tried to make this app as simple as possible, but yet fully functionally - its only POC :) 
